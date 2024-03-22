@@ -20,4 +20,14 @@ Original file is located at
 #         ('mundo', 44, 20, 90, 'hola', 'mundo', 44)
 t = tuple(input().split())
 m = tuple(input().split())
-print(m + t + m)
+t3 = m+t+m
+
+tuplafinal = tuple()
+for palabra in t3:
+    try:
+        numero = int(palabra)
+        tuplafinal += (numero,)
+    except ValueError:
+        tuplafinal += (palabra,)
+
+print(tuplafinal)
